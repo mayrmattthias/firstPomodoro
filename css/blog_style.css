@@ -38,7 +38,6 @@ p {
 
 .btn {
   padding: 10px 25px;
-  border-radius: 100px;
   margin: 3rem;
 }
 
@@ -156,7 +155,7 @@ p {
   width: 0;
   height: 0;
   left: -1px;
-  border-left: 16px solid #0BCEAF;
+  border-left: 16px solid #0bceaf;
   border-top: 11px solid transparent;
   border-bottom: 11px solid transparent;
 }
@@ -224,7 +223,7 @@ p {
   left: 50%;
   border-radius: 4px;
   opacity: 0;
-  transition: .5s;
+  transition: 0.5s;
 }
 
 .portfolio-item:hover .portfolio-btn {
@@ -250,7 +249,7 @@ p {
 }
 
 .testimonial-carousel .owl-dot.active {
-  background: #0BCEAF;
+  background: #0bceaf;
 }
 
 .blog-date {
@@ -264,7 +263,7 @@ p {
   top: calc(50% - 30px);
   left: calc(50% - 30px);
   border-radius: 60px;
-  background: #0BCEAF;
+  background: #0bceaf;
 }
 
 .contact-form .help-block ul {
@@ -274,13 +273,11 @@ p {
 }
 
 .bg-1 {
-  background-color: #F2F2F2;
-  
+  background-color: #f2f2f2;
 }
 
 .bg-2 {
   background-color: #ede32a;
-  
 }
 
 .bg-4 {
@@ -298,5 +295,20 @@ footer {
   text-align: center;
 }
 
+.clock {
+  font-family: "Orbitron", sans-serif;
+  font-size: 120px;
+}
 
+.btn:img {
+  width: 10%;
+}
 
+@media screen and (max-width: 500px) {
+  /* CSS-Anweisungen für Bildschirmbreiten bis maximal 500 Pixel */
+
+  .clock {
+    font-family: "Orbitron", sans-serif;
+    font-size: 60px;
+  }
+}

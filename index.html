@@ -1,43 +1,26 @@
 <!DOCTYPE html>
 <html lang="de">
-
-<head>
-    <meta charset="utf-8">
+  <head>
+    <meta charset="utf-8" />
     <title>Portfolio Matthias Mayr</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
 
-<!--  Favicon -->
-    <link href="img/favicon.ico" rel="icon">
-    <!-- Google Web Fonts -->
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet"> 
-
-    <!-- Font Awesome -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
-    
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@900&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- Bootstrap Stylesheet -->
-    <link href="css/bootstrap.css" rel="stylesheet">
+    <link href="css/bootstrap.css" rel="stylesheet" />
     <!-- Customized Stylesheet -->
-    <link href="css/blog_style.css" rel="stylesheet">
+    <link href="css/blog_style.css" rel="stylesheet" />
+  </head>
 
- 
-
-</head>
-
-<nav class="navbar navbar-expand navbar-light bg-4">
+  <nav class="navbar navbar-expand navbar-light bg-4">
     <div class="container-fluid">
       <ul class="navbar-nav">
-        <li class="nav-item">
-          <a class="nav-link active" href="../main-blog.html">Home</a>
-        </li>
-       <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
-        </li>
         <li class="nav-item">
           <a class="nav-link" href="pomodoro-timer.html">Pomodoro Timer</a>
         </li>
@@ -45,30 +28,36 @@
     </div>
   </nav>
 
-<body class="bg-1"> 
+  <body class="bg-1">
+    <h1>Pomodoro Timer</h1>
 
+    <div class="d-flex justify-content-around">
+      <p class="container justify clock" id="timer"></p>
+    </div>
 
- <h1>Pomodoro Timer</h1>
+    <div class="row">
+      <div class="col-2">
+        <button type="button" class="btn start" id="start">
+          <img src="../media/play.svg" alt="Bootstrap" width="70" height="70" />
+        </button>
+      </div>
+      <div class="col-2">
+        <button type="button" class="btn btn-dark" id="pause">
+          Start Pause
+        </button>
+      </div>
+      <div class="col-2">
+        <button type="button" class="btn btn-dark" id="reset">Reset</button>
+      </div>
+    </div>
 
- <p id="timer"></p>
+    <audio id="start_sound">
+      <source src="/media/meme-okay-lets-go.mp3" />
+    </audio>
+    <audio id="finish_sound"><source src="/media/old-phone.mp3" /></audio>
 
- <button type="button" class="btn btn-dark" id="start">Start</button>
- <button type="button" class="btn btn-dark" id="pause">Start Pause</button>
- <button type="button" class="btn btn-dark" id="stop">Stop</button>
- <button type="button" class="btn btn-dark" id="reset">Reset</button>
-
-
- <audio id="start_sound"><source src="/media/meme-okay-lets-go.mp3"></audio>
- <audio id="finish_sound"><source src="/media/old-phone.mp3"></audio>
- 
-
-
-<!-- Script -->
-<script src="js/main.js"></script>
-
-</body>
-<footer>
-    © Matthias Mayr
-  </footer>
-
+    <!-- Script -->
+    <script src="js/main.js"></script>
+  </body>
+  <footer>© Matthias Mayr</footer>
 </html>
