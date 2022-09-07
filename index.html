@@ -22,6 +22,8 @@
     <!-- Customized Stylesheet -->
     <link href="css/blog_style.css" rel="stylesheet">
 
+ 
+
 </head>
 
 <nav class="navbar navbar-expand navbar-light bg-4">
@@ -44,7 +46,7 @@
   </nav>
 
 <body class="bg-1"> 
- <!-- Blog Start -->
+
 
  <h1>Pomodoro Timer</h1>
 
@@ -59,65 +61,12 @@
  <audio id="start_sound"><source src="/media/meme-okay-lets-go.mp3"></audio>
  <audio id="finish_sound"><source src="/media/old-phone.mp3"></audio>
  
-<!-- Blog End -->
+
+
+<!-- Script -->
+<script src="js/main.js"></script>
 
 </body>
-
-<script>
-var countDownTime = 25 * 60;
-var minutes = Math.floor(countDownTime / 60);
-var seconds = countDownTime % 60;
-document.getElementById("timer").innerHTML = `${minutes} : 0${seconds}`;
-
-/*functions*/
-function startPomodoro() {    
-    document.getElementById("start_sound").play()    
-    mytimer = setInterval(updateTime, 1000);
-}
-
-function displaycountDownTime(){
-    minutes = Math.floor(countDownTime / 60);
-    seconds = countDownTime % 60;
-    if (seconds < 10){
-        seconds = '0' + seconds;
-    };  
-    document.getElementById("timer").innerHTML = `${minutes} : ${seconds}`;
-}
-    
-
-function updateTime(){ 
-    
-    displaycountDownTime();
-
-    countDownTime--;
-    if (countDownTime < 0){
-        clearInterval(mytimer);
-        document.getElementById("finish_sound").play()
-        countDownTime = 5 * 60;
-    }
-}
-
-function stopPomodoro(){
-    clearInterval(mytimer);
-}
-
-function resetPomodoro(){
-    clearInterval(mytimer);
-    countDownTime = 25 * 60;
-    displaycountDownTime();
-    
-}
-
-/*Start timer und führe jede Sekunde eine Funtkion aus*/
-document.getElementById("start").addEventListener("click", startPomodoro);
-
-/*Stop timer*/
-document.getElementById("stop").addEventListener("click", stopPomodoro);
-
-/*Reset All*/
-document.getElementById("reset").addEventListener("click", resetPomodoro);
-</script>
-
 <footer>
     © Matthias Mayr
   </footer>
